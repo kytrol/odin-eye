@@ -1,14 +1,14 @@
 ﻿namespace OdinEye.Extensions
 {
+    using Http;
     using System.Text;
-    using Utf8Json;
     using WebSocketSharp.Net;
 
     public static class HttpListenerResponseExtensions
     {
         public static void Ok<TInstance>(this HttpListenerResponse response, TInstance instance)
         {
-            var serialized = JsonSerializer.Serialize(instance);
+            var serialized = SafeJsonSerializer.Serialize(instance);
 
             response.StatusCode = 200;
             response.ContentType = "application/json";

@@ -30,6 +30,15 @@
 
             try
             {
+                SafeJsonSerializer.Warm();
+            }
+            catch (System.Exception ex)
+            {
+                Logger.LogError($"Failed to pre-build OdinEye's JSON formatters: {ex}");
+            }
+
+            try
+            {
                 HttpWebServer = new HttpWebServer(httpServerAddress.Value, Logger);
             }
             catch (System.Exception ex)

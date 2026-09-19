@@ -69,6 +69,7 @@
         <Compile Include="CharacterStatsControllerValidationTests.cs" />
         <Compile Include="NameBasedGuidTests.cs" />
         <Compile Include="PeerExtensionsTests.cs" />
+        <Compile Include="SafeJsonSerializerTests.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

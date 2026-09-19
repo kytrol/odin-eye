@@ -22,3 +22,6 @@ jobs:
 
       - name: Run OdinEye.Client test suite
         run: .\src\OdinEye.Client.Tests\bin\Release\OdinEye.Client.Tests.exe
+
+      - name: Run OdinEye test suite
+        run: .\src\OdinEye.Tests\bin\Release\OdinEye.Tests.exe

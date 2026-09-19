@@ -407,6 +407,7 @@
         <Compile Include="Http\Api\Controllers\WorldDetailsController.cs" />
         <Compile Include="Http\Api\Controllers\WorldModifiersController.cs" />
         <Compile Include="Http\HttpWebServer.cs" />
+        <Compile Include="Http\SafeJsonSerializer.cs" />
         <Compile Include="Http\WebSockets\ActivityWebSocketService.cs" />
         <Compile Include="Logging\ILogger.cs" />
         <Compile Include="Logging\Logger.cs" />

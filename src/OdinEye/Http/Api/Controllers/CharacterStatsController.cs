@@ -7,7 +7,6 @@ namespace OdinEye.Http.Api.Controllers
     using System.Collections.Concurrent;
     using System.Collections.Generic;
     using System.Linq;
-    using Utf8Json;
     using WebSocketSharp.Server;
 
     // Backs both halves of the character-stats ingest API (ODINEYE-12/
@@ -67,7 +66,7 @@ namespace OdinEye.Http.Api.Controllers
             CharacterStatsSubmission submission;
             try
             {
-                submission = JsonSerializer.Deserialize<CharacterStatsSubmission>(requestArguments.Request.InputStream);
+                submission = SafeJsonSerializer.Deserialize<CharacterStatsSubmission>(requestArguments.Request.InputStream);
             }
             catch
             {

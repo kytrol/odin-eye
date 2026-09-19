@@ -36,6 +36,9 @@ jobs:
         # the rest of this repo's old-style-csproj/packages.config toolchain.
         run: .\src\OdinEye.Client.Tests\bin\Release\OdinEye.Client.Tests.exe
 
+      - name: Run OdinEye test suite
+        run: .\src\OdinEye.Tests\bin\Release\OdinEye.Tests.exe
+
       - name: Generate beta version
         id: version
         uses: paulhatch/semantic-version@v5.3.0
